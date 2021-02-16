@@ -1,0 +1,10 @@
+.Card {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: lightgrey;
+}
+
+.Card img {
+  width: 150px;
+}

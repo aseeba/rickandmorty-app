@@ -1,4 +1,4 @@
 .App {
-    display: grid;
-    gap: 25px;
-  }
+  display: grid;
+  margin-bottom: 20px;
+}
