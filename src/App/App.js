@@ -1,3 +1,5 @@
+import data from '../rickandmortyapi.json'
+
 function App() {
   return (
     <div className="App">
