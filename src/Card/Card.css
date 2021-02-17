@@ -1,0 +1,25 @@
+.Card {
+  display: grid;
+  padding: 20px;
+  background: DodgerBlue;
+  color: LightSkyBlue;
+  box-shadow: 0 4px 12px #999;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.Card img {
+  width: 100%;
+  height: auto;
+  border-radius: 450px;
+  margin-bottom: 20px;
+}
+
+.Card button {
+  background: LightSkyBlue;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  padding: 15px;
+}
