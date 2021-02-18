@@ -1,11 +1,22 @@
 .Card {
   display: grid;
   padding: 20px;
-  background: DodgerBlue;
-  color: LightSkyBlue;
-  box-shadow: 0 4px 12px #999;
+  /* background: DodgerBlue;
+  color: LightSkyBlue; */
+  background: rgb(22, 111, 201);
+  background: radial-gradient(
+    circle,
+    rgba(22, 111, 201, 1) 0%,
+    rgba(14, 71, 128, 1) 100%
+  );
   border-radius: 15px;
   text-align: center;
+}
+
+.Card h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  color: lightskyblue;
 }
 
 .Card img {
@@ -19,7 +30,25 @@
   background: LightSkyBlue;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: rgba(14, 71, 128, 1);
   font-size: 1em;
   padding: 15px;
+  font-weight: 600;
+}
+
+.Card dt {
+  background: lightskyblue;
+  border-radius: 8px;
+  text-align: center;
+  color: rgba(14, 71, 128, 50);
+  font-weight: 600;
+}
+
+.Card dd {
+  background: white;
+  color: rgba(14, 71, 128, 1);
+  margin-left: 0;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
 }

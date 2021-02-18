@@ -20,7 +20,7 @@ export default function Card({
       </h2>
       <img src={image} alt="" />
       <button onClick={() => setAreDetailsVisible(!areDetailsVisible)}>
-        {areDetailsVisible ? 'Hide details' : 'Show details'}
+        {areDetailsVisible ? 'HIDE DETAILS' : 'SHOW DETAILS'}
       </button>
       <dl hidden={!areDetailsVisible}>
         <dt>Gender</dt>
