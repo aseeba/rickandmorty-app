@@ -28,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <header className="Header">{Sort by Name}</header>
       {characters.map(
         ({ name, species, image, status, gender, origin, location, id }) => (
           <Card
