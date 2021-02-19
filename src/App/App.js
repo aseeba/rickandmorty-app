@@ -1,4 +1,5 @@
 import './App.css'
+import AppHeader from '../AppHeader'
 import Card from '../Card'
 import React from 'react'
 // import { results } from '../rickandmortyapi.json'
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="Header">{Sort by Name}</header>
+      <AppHeader title="Rick & Morty" />
       {characters.map(
         ({ name, species, image, status, gender, origin, location, id }) => (
           <Card

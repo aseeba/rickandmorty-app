@@ -1,4 +1,8 @@
 .App {
   display: grid;
   gap: 20px;
+  color: rgb(5, 226, 226);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
 }
