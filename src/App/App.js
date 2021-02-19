@@ -1,5 +1,5 @@
 import './App.css'
-import AppHeader from '../AppHeader'
+import AppHeader from '../Header'
 import Card from '../Card'
 import React from 'react'
 // import { results } from '../rickandmortyapi.json'

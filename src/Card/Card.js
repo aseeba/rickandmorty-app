@@ -20,7 +20,7 @@ export default function Card({
       <h2>{name}</h2>
       <img src={image} alt="" />
       <Button
-        title={isShowingDetails ? 'HIDE DETAILS' : 'SHOW DETAILS'}
+        title={isShowingDetails ? 'Hide Details' : 'Show Details'}
         onClick={() => setIsShowingDetails(!isShowingDetails)}
       />
       {/* <button onClick={() => setAreDetailsVisible(!areDetailsVisible)}>
