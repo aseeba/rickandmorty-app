@@ -34,6 +34,11 @@ function App() {
       <AppHeader title="Rick & Morty" />
       <section className="Button__wrapper">
         <Button
+          onClick={() => setFilteredSpecies('all')}
+          disabled={filteredSpecies === 'all'}
+          title={'All'}
+        />
+        <Button
           onClick={() => setFilteredSpecies('Human')}
           disabled={filteredSpecies === 'Alien'}
           title={'Human'}
@@ -42,11 +47,6 @@ function App() {
           onClick={() => setFilteredSpecies('Alien')}
           disabled={filteredSpecies === 'Alien'}
           title={'Alien'}
-        />
-        <Button
-          onClick={() => setFilteredSpecies('all')}
-          disabled={filteredSpecies === 'all'}
-          title={'All'}
         />
       </section>
       {characters
