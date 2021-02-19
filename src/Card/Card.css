@@ -24,16 +24,6 @@
   margin-bottom: 20px;
 }
 
-.Card button {
-  background: LightSkyBlue;
-  border: none;
-  border-radius: 8px;
-  color: rgba(14, 71, 128, 1);
-  font-size: 1em;
-  padding: 15px;
-  font-weight: 600;
-}
-
 .Card dl {
   margin-bottom: 0;
   font-size: 0.8em;

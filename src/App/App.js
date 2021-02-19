@@ -1,13 +1,15 @@
 import './App.css'
 import AppHeader from '../Header'
 import Card from '../Card'
-import React from 'react'
+import { useEffect, useState } from 'react'
+import Button from '../Button'
 // import { results } from '../rickandmortyapi.json'
 
 function App() {
-  const [characters, setCharacters] = React.useState([])
+  const [characters, setCharacters] = useState([])
+  const [filteredSpecies, setFilteredSpecies] = useState('all')
 
-  React.useEffect(() => {
+  useEffect(() => {
     getAllCharacters() // no url provided, so the default parameter is used
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -30,20 +32,42 @@ function App() {
   return (
     <div className="App">
       <AppHeader title="Rick & Morty" />
-      {characters.map(
-        ({ name, species, image, status, gender, origin, location, id }) => (
-          <Card
-            key={id}
-            name={name}
-            species={species}
-            image={image}
-            status={status}
-            gender={gender}
-            origin={origin.name}
-            location={location.name}
-          />
+      <section className="Button__wrapper">
+        <Button
+          onClick={() => setFilteredSpecies('Human')}
+          disabled={filteredSpecies === 'Alien'}
+          title={'Human'}
+        />
+        <Button
+          onClick={() => setFilteredSpecies('Alien')}
+          disabled={filteredSpecies === 'Alien'}
+          title={'Alien'}
+        />
+        <Button
+          onClick={() => setFilteredSpecies('all')}
+          disabled={filteredSpecies === 'all'}
+          title={'All'}
+        />
+      </section>
+      {characters
+        .filter(
+          character =>
+            filteredSpecies === 'all' || character.species === filteredSpecies
         )
-      )}
+        .map(
+          ({ name, species, image, status, gender, origin, location, id }) => (
+            <Card
+              key={id}
+              name={name}
+              species={species}
+              image={image}
+              status={status}
+              gender={gender}
+              origin={origin.name}
+              location={location.name}
+            />
+          )
+        )}
     </div>
   )
 }
